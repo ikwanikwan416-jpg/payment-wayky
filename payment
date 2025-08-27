@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Aryo Store</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #4facfe, #00f2fe);
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+      color: #fff;
+    }
+    .container {
+      max-width: 400px;
+      margin: auto;
+      background: rgba(0,0,0,0.5);
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .qris img {
+      width: 250px;
+      border-radius: 15px;
+      margin: 15px 0;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    }
+    .methods {
+      margin-top: 20px;
+      text-align: left;
+    }
+    .method {
+      background: rgba(255,255,255,0.1);
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .method span {
+      font-weight: bold;
+    }
+    button {
+      background: #00ff99;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 14px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background: #00cc7a;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>💳 Pembayaran QRIS</h1>
+    <p>Scan QRIS di bawah ini untuk bayar</p>
+    <div class="qris">
+      <img src="https://files.catbox.moe/lru6bc.jpeg" alt="QRIS Wayky Store">
+    </div>
+
+    <h2>Metode Pembayaran Lain</h2>
+    <div class="methods">
+      <div class="method">
+        <span>DANA</span>
+        <button onclick="copyText('081217190110')">Salin</button>
+      </div>
+      <div class="method">
+        <span>GoPay</span>
+        <button onclick="copyText('ga punya')">Salin</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function copyText(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert("Nomor " + text + " berhasil disalin!");
+      });
+    }
+  </script>
+</body>
+</html>
